@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ### ▶️ 5. Run the Uptime Checker
 ```bash
 ### without input 
-python dev.py 
+python main.py 
 ERROR:root:Usage: python main.py <config_file>
 
 ### With input yaml config
