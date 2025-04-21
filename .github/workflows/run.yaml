@@ -2,9 +2,12 @@ name: Health Check Monitor CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
+      - feature/git-workflow
   pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build-and-test:
@@ -26,6 +29,6 @@ jobs:
 
       - name: 🚦 Run health check script with sample config
         run: |
-          python dev.py sample.yaml &
-          sleep 61
+          python main.py sample.yaml &
+          sleep 20
           pkill -f main.py
