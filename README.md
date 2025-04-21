@@ -48,6 +48,21 @@ dev-sre-take-home-exercise-rubric.us-east-1.recruiting-public.fetchrewards.com -
 
 # CHANGES.md
 
+## [v1.3.0] - 2025-04-21
+### Added
+- 🚀 **GitHub Actions Workflow Setup**:
+  - Created `.github/workflows/run.yaml` to run tests on `push` to `main` and `feature/git-workflow`, and on PRs targeting `main`.
+  - Workflow includes steps for installing dependencies and running `pytest`.
+- 🧪 **Unit testing support using `pytest`**:
+  - Added `tests/test_endpoint.py` and `tests/test_utils.py` with basic test coverage.
+  - Includes use of `assert` for verifying logic such as domain extraction and endpoint configuration.
+- 🕒 **Availability cycle consistency**:
+  - Health checks and logging now run every 15 seconds **regardless of number of endpoints or their response times**.
+- 💬 **Inline requirement comments added**:
+  - Documented requirement that endpoints must respond in **500ms or less** using code comments for clarity.
+
+---
+
 ## [v1.2.0] - 2025-04-21
 ### Added
 - ✅ **Graceful termination support using `KeyboardInterrupt` handler**:
